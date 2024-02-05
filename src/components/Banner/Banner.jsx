@@ -27,10 +27,10 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        // className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/Outfit.png" alt="" />
+          <img src="/eso.png" alt="" />
         </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>

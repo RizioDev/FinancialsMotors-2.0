@@ -1,0 +1,285 @@
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slides");
+    var dots = document.getElementsByClassName("slide-thumbnail");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    console.log(slideIndex);
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      // slides[i].style.display = "inline";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    // slides[slideIndex-1].style.display = "inline";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+  }
+</script>
+
+<div class="container">
+  <!-- main images -->
+  <div class="holder">
+    <div class="slides">
+      <img
+        src="https://images.unsplash.com/photo-1505438157249-00e1b44ee34f?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=dfc554074f522ec42818a052152dac21g"
+        alt=""
+      />
+    </div>
+
+    <div class="slides">
+      <img
+        src="https://images.unsplash.com/photo-1515870672913-a4c298575776?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=aa80486fd3343134706e785c034b339d"
+      />
+    </div>
+
+    <div class="slides">
+      <img
+        src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=e26ec8c74dc99aff53a60741538cad5f"
+      />
+    </div>
+
+    <div class="slides">
+      <img
+        src="https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=583c2bf56c8006e507e2a9905fc1e54c"
+      />
+    </div>
+
+    <div class="slides">
+      <img
+        src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=69093505f999d8170e9a1aab3771c07e"
+      />
+    </div>
+
+    <div class="slides">
+      <img
+        src="https://images.unsplash.com/photo-1485199433301-8b7102e86995?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=c7783fe3a697b1a2248450120435cbc3"
+      />
+    </div>
+  </div>
+
+  <div class="prevContainer">
+    <a class="prev" onclick="plusSlides(-1)">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+  <div class="nextContainer">
+    <a class="next" onclick="plusSlides(1)">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- thumnails in a row -->
+  <div class="row">
+    <div class="column">
+      <img
+        class="slide-thumbnail"
+        src="https://images.unsplash.com/photo-1505438157249-00e1b44ee34f?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=dfc554074f522ec42818a052152dac21g"
+        onclick="currentSlide(1)"
+        alt="Caption One"
+      />
+    </div>
+    <div class="column">
+      <img
+        class="slide-thumbnail"
+        src="https://images.unsplash.com/photo-1515870672913-a4c298575776?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=aa80486fd3343134706e785c034b339d"
+        onclick="currentSlide(2)"
+        alt="Caption Two"
+      />
+    </div>
+    <div class="column">
+      <img
+        class="slide-thumbnail"
+        src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=e26ec8c74dc99aff53a60741538cad5f"
+        onclick="currentSlide(3)"
+        alt="Caption Three"
+      />
+    </div>
+    <div class="column">
+      <img
+        class="slide-thumbnail"
+        src="https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=583c2bf56c8006e507e2a9905fc1e54c"
+        onclick="currentSlide(4)"
+        alt="Caption Four"
+      />
+    </div>
+    <div class="column">
+      <img
+        class="slide-thumbnail"
+        src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=69093505f999d8170e9a1aab3771c07e"
+        onclick="currentSlide(5)"
+        alt="Caption Five"
+      />
+    </div>
+    <div class="column">
+      <img
+        class="slide-thumbnail"
+        src="https://images.unsplash.com/photo-1485199433301-8b7102e86995?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=c7783fe3a697b1a2248450120435cbc3"
+        onclick="currentSlide(6)"
+        alt="Caption Six"
+      />
+    </div>
+  </div>
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .container {
+      position: relative;
+      padding: 80px;
+    }
+
+    /* .holder {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+} */
+    .holder::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide the images by default */
+    .slides {
+      display: none;
+      /* max-width: 1000px; */
+      /* width: 100%;
+  flex-shrink: 0;
+  height: 100%; */
+    }
+
+    .slides img {
+      width: 100%;
+    }
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (max-width: 600px) {
+      .prevContainer,
+      .nextContainer {
+        display: none;
+        visibility: hidden;
+      }
+    }
+    .prevContainer,
+    .nextContainer {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 50%;
+      transform: translate(0, calc(-50% - 54px));
+      height: 54px;
+      width: 54px;
+      cursor: pointer;
+    }
+
+    .prevContainer {
+      margin-left: 26px;
+      left: 0;
+      border-radius: 30px 0 0 30px;
+    }
+
+    .prev {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      height: 34px;
+      width: 32px;
+      float: left;
+      margin-left: 12px;
+    }
+
+    .prev svg,
+    .next svg {
+      fill: white;
+    }
+
+    .nextContainer {
+      margin-right: 26px;
+      right: 0;
+      border-radius: 0 30px 30px 0;
+    }
+
+    .next {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      height: 34px;
+      width: 32px;
+      float: right;
+      margin-right: 12px;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: left;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+    /* Add a transparency effect for thumbnail images */
+    .slide-thumbnail {
+      width: 100%;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    .active,
+    .slide-thumbnail:hover {
+      opacity: 1;
+    }
+  </style>
+</div>

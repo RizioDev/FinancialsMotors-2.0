@@ -2,23 +2,37 @@
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
 import Promo from "../components/Promo.astro";
-import Gallery from "../components/Gallery.astro";
 import Slider from "../components/Slider.astro";
 import Banner from "../components/Banner/Banner.jsx";
-import Swiper from "../components/Swiper.astro";
 import Baner from "../components/Baner.astro";
 import Footer from "../components/Footer.astro";
+import Detail from "../components/Detail/Detail.jsx";
+import Ficha from "../components/Ficha.astro";
+import Side from "../components/Side.astro";
+import Wpp from "../components/Wpp.astro";
+import Tumba from "../components/Tumba.astro";
+import Ban from "../components/Ban.astro";
+import Mapa from "../components/Mapa.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
   <body>
     <NavBar />
+    <Wpp />
+    <!-- <Ban /> -->
     <Banner client:load />
-    <!-- <Swiper /> -->
+    <!-- <Thumb client:load /> -->
     <Promo />
+    <Detail client:load />
+    <!-- <Tumba/> -->
+    <Ficha />
     <Baner />
-    <!-- <Gallery /> -->
+    <Side />
+    <Mapa />
     <Footer />
     <style>
       :root {
@@ -42,7 +56,8 @@ import Footer from "../components/Footer.astro";
       body {
         margin: 0;
         padding: 0;
-        font-family: monospace;
+        font-family: "Courier New", Courier, monospace;
+        background-color: #fdfdfd;
       }
 
       *,

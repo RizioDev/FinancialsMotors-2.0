@@ -1,0 +1,33 @@
+/* Estilos para pantallas grandes */
+
+ /* .swiper {
+  height: 100%;
+  width: 80%;
+  padding-top: 5px
+}  */
+
+.swiper-container {
+  width: 90%;
+  height: 40%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+
+}
+
+/* .mySwiper2 {
+  height: 30%;
+  width: 100%;
+} */
+
+/* .swiper-slider {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

@@ -1,0 +1,291 @@
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
+import { GrNext } from "react-icons/gr";
+import Swal from "sweetalert2";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import "./cosa.css";
+// import Thumb from "./Thumb.jsx";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+const Detail = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  return (
+    <div className="flex flex-col md:flex-row bg-blue-100">
+      <div className="md:w-1/2 md:ml-10">
+        <div className="mt-5">
+          <p className="inline-block font-noto bg-green-400 text-white rounded-full capitalize font-bold px-3 py-[-5px] ">
+            Disponible
+          </p>
+
+          <p className="text-xs mt-2 text-blue-500 mb-1 font-bold uppercase ">
+            <a href="/catalogo" className="hover:underline">
+              Comprar nueva
+            </a>{" "}
+            <span className="text-black">/</span> BAJAJ{" "}
+            <span className="text-black">/</span>
+            <span className="text-gray-600"> Rouser NS200</span>
+            <p className="text-xl mb-1 normal-case text-gray-600 font-noto">
+              Entrega Asegurada
+            </p>
+          </p>
+        </div>
+        {/* <Thumb /> */}
+
+        <section className="max-w-screen-sm 2xl:max-w-screen-md mx-auto">
+          <>
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+            >
+              <SwiperSlide>
+                <img
+                  src="/finan.png"
+                  className="w-full h-full object-cover"
+                  alt="Finan"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-2.jpg"
+                  alt="Nature 2"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-3.jpg"
+                  alt="Nature 3"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-4.jpg"
+                  alt="Nature 4"
+                />
+              </SwiperSlide>
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-7.jpg"
+                  alt="Nature 7"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-8.jpg"
+                  alt="Nature 8"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-9.jpg"
+                  alt="Nature 9"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="https://swiperjs.com/demos/images/nature-10.jpg"
+                  alt="Nature 10"
+                />
+              </SwiperSlide>
+            </Swiper>
+          </>
+        </section>
+
+        <div className="ml-1 mt-2 items-center justify-center">
+          <div className="mt-5"></div>
+        </div>
+      </div>
+      <div className="md:w-1/2 md:mt-28 md:ml-24">
+        <div className="mb-6 flex items-center underline">
+          <span>
+            <img
+              src="https://media.discordapp.net/attachments/1136484648344621087/1138541153667530812/descarga_1.png?width=499&height=676"
+              className="h-10 mr-3"
+              alt="Financials Logo"
+            />
+          </span>
+          <div>
+            <h1 className="text-2xl 2xl:text-3xl text-black uppercase  font-noto">
+              solicitar <span className="font-bold">infórmacion</span>
+            </h1>
+          </div>
+        </div>
+        <h1 className="text-black font-noto font-bold text-3xl md:text-4xl 2xl:text-5xl">
+          ROUSER NS200
+        </h1>
+        <h2 className="text-gray-600 font-noto font-semibold text-xl">
+          2024 <span className="text-black">•</span> 0 km{" "}
+        </h2>
+        {/* <h3 className="text-gray-600 font-noto font-semibold text-xs">
+          Vendido por:{" "}
+          <span className="text-blue-800 font-extralight">BAJAJ</span>
+        </h3> */}
+        <h1 className="text-xl 2xl:text-3xl">
+          <span className=" font-noto text-gray-600 font-semibold ">
+            Precio:{" "}
+          </span>
+          <span className="bg-yellow-300 border border-black font-extrabold p-1">
+            $ 3.999.990{" "}
+          </span>
+          <del className=" text-gray-600 font-bold text-sn ml-2 font-noto">
+            $4.200.000
+          </del>
+        </h1>
+
+        <form className="max-w-lg xl:max-w-lg 2xl:max-w-2xl mt-20">
+          <h1 className="text-black font-noto font-bold">Anticipo</h1>
+          <div className="mb-1">
+            <select
+              id="Anticipo"
+              name="Anticipo"
+              required
+              className="w-full px-4 py-3 font-semibold border border-gray-400 rounded-lg focus:outline-none focus:border-primary-300"
+            >
+              <option value="Auto usado">Auto usado</option>
+              <option value="Efectivo">Efectivo</option>
+              <option value="Financiado">Financiado</option>
+            </select>
+          </div>
+          <div className="mb-1">
+            <input
+              type="text"
+              id="Nombre"
+              required
+              name="Nombre"
+              placeholder="🙂 Nombre y apellido"
+              className="w-full px-4 py-3 border border-gray-400 font-semibold  rounded-lg focus:outline-none focus:border-primary-300"
+            />
+          </div>
+          <div className="mb-1">
+            <input
+              type="text"
+              id="Telefono"
+              required
+              minLength="9"
+              name="Telefono"
+              pattern="[0-9]+" // Expresión regular para solo permitir números
+              inputMode="numeric" // Indicamos que es un input numérico
+              placeholder="📞 Teléfono Cód. (Área + Nro)"
+              className="w-full px-4 py-3 font-semibold border border-gray-400 rounded-lg focus:outline-none focus:border-primary-300"
+            />
+          </div>
+          <div className="mb-1">
+            <input
+              type="text"
+              id="Localidad"
+              required
+              name="Localidad"
+              placeholder="📍 Localidad"
+              className="w-full px-4 py-3 border font-semibold border-gray-400 rounded-lg focus:outline-none focus:border-primary-300"
+            />
+          </div>
+          {/* <div className="flex justify-end mt-3">
+            <button
+              type="submit"
+              className="px-6 font-noto font-bold w-full py-3 text-lg text-white rounded-lg bg-orange-500 hover:bg-orange-400 focus:outline-none "
+            >
+              Realizar presupuesto
+            </button>
+          </div> */}
+          <div className="flex items-center justify-end space-x-2">
+            <button
+              type="submit"
+              className="flex items-center font-bold justify-center px-6 w-full mt-1 py-3 text-lg font-noto text-white rounded-lg bg-green-600 hover:bg-green-500 focus:outline-none "
+            >
+              <FaWhatsapp size={20} className="mr-2" />
+              <span className="text-center">Realizar presupuesto</span>
+            </button>
+          </div>
+        </form>
+        <div className=" mt-2 flex ">
+          <ul>
+            <li class="flex items-center space-x-3">
+              <svg
+                class="flex-shrink-0 w-3.5 h-3.5 text-green-500 "
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 16 12"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5.917 5.724 10.5 15 1.5"
+                />
+              </svg>
+              <span className="font-semibold font-noto text-base">
+                Plan personalizado a tu medida.
+              </span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg
+                class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 16 12"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5.917 5.724 10.5 15 1.5"
+                />
+              </svg>
+              <span className="font-semibold font-noto text-base">
+                Financiación.
+              </span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg
+                class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 16 12"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5.917 5.724 10.5 15 1.5"
+                />
+              </svg>
+              <span className="font-semibold font-noto text-base">
+                Tomamos tu usado como parte de pago.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Detail;
