@@ -15,21 +15,30 @@ import Mapa from "../components/Mapa.astro";
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-  </head>
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="Estilo agresivo y apariencia robusta. Tablero analógico y digital. Comandos retroiluminados, luces traseras LED. Llantas de aleación. Diseño ergonómico. $4.000.000,00"
+  />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Financials Motors</title>
   <body>
     <NavBar />
     <Wpp />
     <Banner client:load />
-    <Promo />
     <Detail client:load />
+    <Promo />
     <Ficha />
     <Baner />
     <Side />
     <Mapa />
     <Footer />
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       :root {
         /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
         --primary: #ff9966;
@@ -52,7 +61,7 @@ import Mapa from "../components/Mapa.astro";
         margin: 0;
         padding: 0;
         font-family: "Courier New", Courier, monospace;
-        background-color: #fdfdfd;
+        background-color: #0f172a;
       }
 
       *,

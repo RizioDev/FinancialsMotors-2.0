@@ -14,12 +14,12 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <>
+    <div className="mt-[-10px]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 73000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -32,16 +32,14 @@ const Banner = () => {
         <SwiperSlide>
           <img src="/eso.png" alt="" />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <a href="/financia">
+            <img src="/eso2.png" alt="" />
+          </a>
+        </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
