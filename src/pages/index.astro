@@ -1,8 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
 import Promo from "../components/Promo.astro";
-import Slider from "../components/Slider.astro";
 import Banner from "../components/Banner/Banner.jsx";
 import Baner from "../components/Baner.astro";
 import Footer from "../components/Footer.astro";
@@ -11,97 +9,86 @@ import Ficha from "../components/Ficha.astro";
 import Side from "../components/Side.astro";
 import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="es">
-  <meta charset="UTF-8" />
-  <meta
-    name="description"
-    content="Estilo agresivo y apariencia robusta. Tablero analógico y digital. Comandos retroiluminados, luces traseras LED. Llantas de aleación. Diseño ergonómico. $4.000.000,00"
-  />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <meta name="generator" content={Astro.generator} />
-  <title>Financials Motors</title>
-  <body>
-    <NavBar />
-    <Wpp />
-    <Banner client:load />
-    <Detail client:load />
-    <Promo />
-    <Ficha />
-    <Baner />
-    <Side />
-    <Mapa />
-    <Footer />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      :root {
-        /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-        --primary: #ff9966;
-        --primaryLight: #ffba43;
-        --secondary: #ffba43;
-        --secondaryLight: #ffba43;
-        --headerColor: #0a0000;
-        --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fdfdfd;
-        /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-        /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-        --bodyFontSize: 1rem;
-        /* 60px - 100px top and bottom */
-        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-      }
+<Layout title="Financials Motors">
+  <Wpp />
+  <Banner client:load />
+  <Detail client:load />
+  <Promo />
+  <Ficha />
+  <Baner />
+  <Side />
+  <Mapa />
+  <Footer />
+</Layout>
 
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Courier New", Courier, monospace;
-        background-color: #0f172a;
-      }
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  :root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff9966;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #0a0000;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fdfdfd;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  }
 
-      *,
-      *:before,
-      *:after {
-        /* prevents padding from affecting height and width */
-        box-sizing: border-box;
-      }
-      .cs-topper {
-        font-size: var(--topperFontSize);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        text-align: inherit;
-        letter-spacing: 0.1em;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 0.25rem;
-        display: block;
-      }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #0f172a;
+  }
 
-      .cs-title {
-        font-size: var(--headerFontSize);
-        font-weight: 900;
-        line-height: 1.2em;
-        text-align: inherit;
-        max-width: 43.75rem;
-        margin: 0 0 1rem 0;
-        color: var(--headerColor);
-        position: relative;
-      }
+  *,
+  *:before,
+  *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+  }
+  .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
 
-      .cs-text {
-        font-size: var(--bodyFontSize);
-        line-height: 1.5em;
-        text-align: inherit;
-        width: 100%;
-        max-width: 40.625rem;
-        margin: 0;
-        color: var(--bodyTextColor);
-      }
-    </style>
-  </body>
-</html>
+  .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+
+  .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+</style>

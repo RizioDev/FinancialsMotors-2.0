@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { GrNext } from "react-icons/gr";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -11,16 +10,58 @@ import "./cosa.css";
 // import Thumb from "./Thumb.jsx";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 const Detail = () => {
+  const [whatsAppMessage, setWhatsAppMessage] = useState("");
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const [formData, setFormData] = useState({
+    Nombre: "",
+    Telefono: "",
+    Localidad: "",
+    Anticipo: "Financiado",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const whatsappSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Form Data:", formData.Nombre);
+
+    const isFormValid =
+      formData.Nombre && formData.Telefono && formData.Localidad;
+
+    if (isFormValid) {
+      const link = `https://api.whatsapp.com/send/?phone=541131908921&text=Hola%21+mi+nombre+es+${encodeURIComponent(
+        formData.Nombre
+      )}+soy+de+${encodeURIComponent(
+        formData.Localidad
+      )}+y+estoy+interesado+en+la+Rouser+NS200+me+gustaria+pagar+el+anticipo+con+${encodeURIComponent(
+        formData.Anticipo
+      )}&type=phone_number&app_absent=0`;
+
+      window.open(link, "_blank");
+      setWhatsAppMessage("");
+    } else {
+      setWhatsAppMessage(
+        "¡Debes completar el formulario para enviar por WhatsApp!"
+      );
+    }
+  };
   return (
     <div id="comprar" className="flex flex-col md:flex-row bg-gray-900">
       <div className="md:w-1/2 md:ml-10">
-        <div className="mt-5 ml-2  2xl:ml-16">
-          <p className="inline-block font-noto bg-green-400 text-white rounded-full capitalize font-bold px-3 py-[-5px] ">
+        <div className="mt-5 ml-2 lg:ml-6 2xl:ml-16">
+          <p className="inline-block font-noto bg-green-400 text-white rounded-full capitalize font-bold px-3 py-[-5px]">
             Disponible
           </p>
 
-          <p className="text-xs mt-2 text-blue-600 mb-1 font-bold uppercase ">
+          <div className="text-xs mt-2 text-blue-600 mb-1 font-bold uppercase">
             <a href="/" className="hover:underline">
               Comprar nueva
             </a>{" "}
@@ -36,7 +77,7 @@ const Detail = () => {
             <p className="text-xl mb-1 normal-case text-white font-noto">
               Entrega Asegurada
             </p>
-          </p>
+          </div>
         </div>
         {/* <Thumb /> */}
 
@@ -143,11 +184,13 @@ const Detail = () => {
               id="Anticipo"
               name="Anticipo"
               required
+              onChange={handleChange}
+              value={formData.Anticipo}
               className="w-full px-4 py-3 font-semibold border border-gray-400 rounded-lg focus:outline-none focus:border-primary-300"
             >
+              <option value="Financiado">Financiado</option>
               <option value="Auto usado">Auto usado</option>
               <option value="Efectivo">Efectivo</option>
-              <option value="Financiado">Financiado</option>
             </select>
           </div>
           <div className="mb-1">
@@ -156,19 +199,23 @@ const Detail = () => {
               id="Nombre"
               required
               name="Nombre"
+              onChange={handleChange}
+              value={formData.Nombre}
               placeholder="🙂 Nombre y apellido"
               className="w-full px-4 py-3 border border-gray-400 font-semibold  rounded-lg focus:outline-none focus:border-primary-300"
             />
           </div>
           <div className="mb-1">
             <input
-              type="text"
+              type="number"
               id="Telefono"
               required
+              inputMode="numeric"
               minLength="9"
+              onChange={handleChange}
+              value={formData.Telefono}
               name="Telefono"
               pattern="[0-9]+" // Expresión regular para solo permitir números
-              inputMode="numeric" // Indicamos que es un input numérico
               placeholder="📞 Teléfono Cód. (Área + Nro)"
               className="w-full px-4 py-3 font-semibold border border-gray-400 rounded-lg focus:outline-none focus:border-primary-300"
             />
@@ -178,6 +225,8 @@ const Detail = () => {
               type="text"
               id="Localidad"
               required
+              onChange={handleChange}
+              value={formData.Localidad}
               name="Localidad"
               placeholder="📍 Localidad"
               className="w-full px-4 py-3 border font-semibold border-gray-400 rounded-lg focus:outline-none focus:border-primary-300"
@@ -194,12 +243,18 @@ const Detail = () => {
           <div className="flex items-center justify-end space-x-2">
             <button
               type="submit"
+              onClick={whatsappSubmit}
               className="flex items-center font-bold justify-center px-6 w-full mt-1 py-3 text-lg font-noto text-white rounded-lg bg-green-600 hover:bg-green-500 focus:outline-none "
             >
               <FaWhatsapp size={20} className="mr-2" />
               <span className="text-center">Realizar presupuesto</span>
             </button>
           </div>
+          {whatsAppMessage && (
+            <p className="text-yellow-200 font-bold text-sm mt-1 font-noto">
+              {whatsAppMessage}
+            </p>
+          )}
         </form>
         <div className=" mt-2 flex ">
           <ul>
