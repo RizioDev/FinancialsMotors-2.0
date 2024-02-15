@@ -1,10 +1,10 @@
 ---
-import FinanciaLayout from "../layouts/FinanciaLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import FinanciaForm from "../components/FinanciaForm.astro";
-import NavBar from "../components/NavBar.astro";
 ---
 
-<FinanciaLayout title="Financia hoy">
-  <NavBar />
-  <FinanciaForm />
-</FinanciaLayout>
+<Layout title="Financia hoy!">
+  <section class="mt-[95px]">
+    <FinanciaForm />
+  </section>
+</Layout>
