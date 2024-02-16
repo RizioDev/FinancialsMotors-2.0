@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import FinanciaForm from "../components/FinanciaForm.astro";
+import FinanciaFor from "../components/FinanciaFor.jsx";
+import Wpp from "../components/Wpp.astro";
 ---
 
-<Layout title="Financia hoy!">
-  <section class="mt-[95px]">
-    <FinanciaForm />
+<Layout title="¡Financia hoy!">
+  <Wpp />
+  <section class="mt-[95px] bg-gradient-to-r from-slate-800 to-gray-900">
+    <FinanciaFor client:load />
   </section>
 </Layout>

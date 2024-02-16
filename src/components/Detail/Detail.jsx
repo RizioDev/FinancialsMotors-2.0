@@ -10,6 +10,11 @@ import "./cosa.css";
 // import Thumb from "./Thumb.jsx";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 const Detail = () => {
+  const [acceptTerms, setAcceptTerms] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setAcceptTerms(!acceptTerms);
+  };
   const [whatsAppMessage, setWhatsAppMessage] = useState("");
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -37,7 +42,7 @@ const Detail = () => {
       formData.Nombre && formData.Telefono && formData.Localidad;
 
     if (isFormValid) {
-      const link = `https://api.whatsapp.com/send/?phone=541131908921&text=Hola%21+mi+nombre+es+${encodeURIComponent(
+      const link = `https://api.whatsapp.com/send/?phone=541131042028&text=Hola%21+mi+nombre+es+${encodeURIComponent(
         formData.Nombre
       )}+soy+de+${encodeURIComponent(
         formData.Localidad
@@ -244,6 +249,7 @@ const Detail = () => {
             <button
               type="submit"
               onClick={whatsappSubmit}
+              disabled={!acceptTerms}
               className="flex items-center font-bold justify-center px-6 w-full mt-1 py-3 text-lg font-noto text-white rounded-lg bg-green-600 hover:bg-green-500 focus:outline-none "
             >
               <FaWhatsapp size={20} className="mr-2" />
@@ -256,6 +262,27 @@ const Detail = () => {
             </p>
           )}
         </form>
+        <p className="flex mt-2 mb-2">
+          <label>
+            <span className="checkbox">
+              <input
+                title="Please tick"
+                name="accept_terms"
+                type="checkbox"
+                className="required"
+                id="js-accept-terms"
+                checked={acceptTerms}
+                onChange={handleCheckboxChange}
+              />
+            </span>
+          </label>
+          <span className="ml-4 text-white">
+            Acepto los{" "}
+            <span className="text-blue-500 font-bold underline">
+              <a href="/terminos-y-condiciones">Términos y Condiciones.</a>
+            </span>
+          </span>
+        </p>
         <div className=" mt-2 flex ">
           <ul>
             <li className="flex items-center space-x-3">

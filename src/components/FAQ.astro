@@ -1,0 +1,238 @@
+<section class="bg-gray-950">
+  <div class="container mx-auto md:px-6 xl:px-14 text-white">
+    <section class="text-white">
+      <div class="flex justify-center items-center mb-3">
+        <img
+          src="https://cdn.discordapp.com/attachments/1136484648344621087/1138541153667530812/descarga_1.png"
+          alt="Logo"
+          class="w-8 mt-5"
+        />
+      </div>
+      <h1 class="mb-10 pl-6 text-5xl font-mono text-center">
+        Preguntas Frecuentes
+      </h1>
+
+      <h1 class="font-semibold text-xl font-sans italic mb-5">hola</h1>
+    </section>
+    <div class="container mx-auto p-4">
+      <div
+        x-data="{ selected: null }"
+        class="border border-gray-200 rounded-lg"
+        class="p-3"
+      >
+        <!-- The accordion items -->
+        <div
+          class="[&>*]:border-b [&>*]:border-b-gray-200 last:[&>*]:border-b-0"
+        >
+          <!-- Accordion item 1 -->
+          <div>
+            <!-- The button that toggles the accordion item -->
+            <button
+              @click="selected !== 1 ? selected = 1 : selected = null"
+              class="w-full flex justify-between items-center p-3"
+            >
+              <!-- The title of the accordion item -->
+              <h3 class="text-lg font-semibold">
+                I. Modificación de los Términos y Condiciones
+              </h3>
+              <!-- The icon that indicates whether the accordion item is expanded or collapsed -->
+              <div>
+                <span
+                  class="text-lg transition-all block"
+                  :class="selected === 1 ? 'rotate-45' : ''">+</span
+                >
+              </div>
+            </button>
+            <div
+              x-cloak
+              x-show="selected === 1"
+              class="text-lg text-white p-3"
+              x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+            >
+              Los presentes Términos y Condiciones tienen carácter obligatorio y
+              vinculante para los Visitantes, Usuario y Clientes del Sitio y
+              serán de aplicación a todos los productos y servicios ofrecidos en
+              el Sitio www.financialsmotors.com.ar (en adelante, el “Sitio”),
+              por lo que su uso implica el conocimiento y la aceptación de los
+              mismos. Si usted no está de acuerdo con los Términos y
+              Condiciones, deberá abstenerse de adquirir productos a través del
+              sitio y/o utilizarlo. Por “Visitante” se entiende toda persona
+              ajena al Sitio que ingresa y navega por él en una o más
+              oportunidades pero sin ser miembro activo ni registrado. Por
+              “Usuario” del Sitio se entiende tanto a los miembros registrados
+              como a los Visitantes. Por “Clientes” se consideran aquellos
+              Usuarios o Visitantes que han comprado uno o más productos o
+              servicios ofrecidos en el Sitio. Estos Términos y Condiciones
+              estarán complementados por los requisitos que surjan de los Medios
+              Electrónicos de Comunicación (conforme este término se define más
+              adelante).
+            </div>
+          </div>
+          <!-- Accordion item 2 -->
+          <div>
+            <button
+              @click="selected !== 2 ? selected = 2 : selected = null"
+              class="w-full flex justify-between items-center p-3"
+            >
+              <h3 class="text-lg font-semibold">
+                II. Usuarios: Condiciones para su alta y tratamiento
+              </h3>
+              <div>
+                <span
+                  class="text-lg transition-all block"
+                  :class="selected === 2 ? 'rotate-45' : ''">+</span
+                >
+              </div>
+            </button>
+            <div
+              x-cloak
+              x-show="selected === 2"
+              class="text-lg text-white p-3"
+              x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+            >
+              Los presentes Términos y Condiciones tienen carácter obligatorio y
+              vinculante para los Visitantes, Usuario y Clientes del Sitio y
+              serán de aplicación a todos los productos y servicios ofrecidos en
+              el Sitio www.financialsmotors.com.ar (en adelante, el “Sitio”),
+              por lo que su uso implica el conocimiento y la aceptación de los
+              mismos. Si usted no está de acuerdo con los Términos y
+              Condiciones, deberá abstenerse de adquirir productos a través del
+              sitio y/o utilizarlo. Por “Visitante” se entiende toda persona
+              ajena al Sitio que ingresa y navega por él en una o más
+              oportunidades pero sin ser miembro activo ni registrado. Por
+              “Usuario” del Sitio se entiende tanto a los miembros registrados
+              como a los Visitantes. Por “Clientes” se consideran aquellos
+              Usuarios o Visitantes que han comprado uno o más productos o
+              servicios ofrecidos en el Sitio. Estos Términos y Condiciones
+              estarán complementados por los requisitos que surjan de los Medios
+              Electrónicos de Comunicación (conforme este término se define más
+              adelante).
+            </div>
+          </div>
+          <!-- Accordion item 3 -->
+          <div>
+            <button
+              @click="selected !== 3 ? selected = 3 : selected = null"
+              class="w-full flex justify-between items-center p-3"
+            >
+              <h3 class="text-lg font-semibold">III. Términos generales</h3>
+              <div>
+                <span
+                  class="text-lg transition-all block"
+                  :class="selected === 3 ? 'rotate-45' : ''">+</span
+                >
+              </div>
+            </button>
+            <div
+              x-cloak
+              x-show="selected === 3"
+              class="text-lg text-white p-3"
+              x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+            >
+              Los Términos y Condiciones podrán ser sustituidos o sufrir
+              modificaciones en cualquier momento y a exclusivo criterio de
+              Financials Motors y no se requerirá a los Usuarios y/o Clientes su
+              consentimiento.  Asimismo, estos Términos y condiciones podrán ser
+              complementados por los términos y condiciones que a futuro se
+              introduzcan en este Sitio, los cuales serán considerados aceptados
+              en todos sus términos por los actuales Clientes, toda vez que
+              Financials Motors pondrá un aviso en el Sitio alertando a los
+              Clientes y Usuarios sobre estos cambios, durante un tiempo
+              razonable, comunicación que será considerada como suficiente a los
+              fines informativos de la actualización de los Términos y
+              Condiciones. Sin perjuicio de lo anterior, los Clientes y Usuarios
+              son responsables de leer estos Términos y Condiciones cada vez que
+              ingresen al Sitio para ver si han sufrido modificaciones.
+            </div>
+          </div>
+          <!-- Accordion item 4 -->
+          <div>
+            <!-- The button that toggles the accordion item -->
+            <button
+              @click="selected !== 4 ? selected = 4 : selected = null"
+              class="w-full flex justify-between items-center p-3"
+            >
+              <!-- The title of the accordion item -->
+              <h3 class="text-lg font-semibold">IV. Clientes</h3>
+              <!-- The icon that indicates whether the accordion item is expanded or collapsed -->
+              <div>
+                <span
+                  class="text-lg transition-all block"
+                  :class="selected === 4 ? 'rotate-45' : ''">+</span
+                >
+              </div>
+            </button>
+            <div
+              x-cloak
+              x-show="selected === 4"
+              class="text-lg text-white p-3"
+              x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+            >
+              FINANCIALS MOTORS considerará Clientes a los Usuarios compren los
+              productos o servicios ofrecidos en el Sitio, sin embargo estos no
+              perderán su carácter de Usuarios y la información proporcionada en
+              calidad de tales oportunamente, será conservada por FINANCIALS
+              MOTORS   a los efectos de la prestación del Servicio contratado y
+              con las limitaciones y obligaciones asumidas en los presentes
+              Términos y Condiciones. Serán efectivamente considerados Clientes
+              cuando reciban la confirmación por parte de FINANCIALS MOTORS  
+              por cualquiera de los Medios Electrónicos de Comunicación
+              (conforme se define más adelante).  FINANCIALS MOTORS   se reserva
+              el derecho de, sin expresión de causa, dar de baja cualquier
+              cuenta de Cliente activo que se haya dado de alta en el Sitio, sin
+              que esto implique para el Cliente un derecho de reclamar daños y/o
+              perjuicios por ello.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </div>
+  <div class="custom-shape-divider-bottom-1708104426">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+
+  /* .custom-shape-divider-bottom-1708104426 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  } */
+
+  .custom-shape-divider-bottom-1708104426 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 29px;
+  }
+
+  .custom-shape-divider-bottom-1708104426 .shape-fill {
+    fill: #1a202c;
+  }
+</style>
