@@ -173,7 +173,9 @@ const Detail = () => {
           <span className="text-blue-800 font-extralight">BAJAJ</span>
         </h3> */}
         <h1 className="text-xl 2xl:text-3xl">
-          <span className=" font-noto text-white font-semibold ">Precio: </span>
+          <span className=" font-noto text-white font-semibold ">
+            Reserva:{" "}
+          </span>
           <span className="bg-blue-400 border border-black font-extrabold p-1">
             $ 450.000{" "}
           </span>
@@ -187,33 +189,35 @@ const Detail = () => {
         </h1>
 
         <div className="card">
-          <a href="#" className="socialContainer containerOne">
+          <button className="socialContainer containerOne">
             <img className="w-16 h-10" src="/visa.png" alt="" />
-          </a>
+          </button>
 
-          <a href="#" className="socialContainer containerTwo">
+          <button className="socialContainer containerTwo">
             <img className="w-16 h-8" src="msc.png" alt="" />
-          </a>
+          </button>
 
-          <a href="#" className="socialContainer containerThree">
+          <button className="socialContainer containerThree">
             <img
               className="w-15 h-9"
               src="https://seeklogo.com/images/N/naranja-x-logo-DE538DBF7B-seeklogo.com.png"
               alt=""
             />
-          </a>
+          </button>
 
-          <a href="#" className="socialContainer containerFour">
+          <button className="socialContainer containerFour">
             <img src="/mp.png" alt="" />
-          </a>
+          </button>
 
-          <a href="#" className="socialContainer containerFour">
+          <button className="socialContainer containerFour">
             <img
-              className="w-15 h-8"
               src="https://brandemia.org/sites/default/files/inline/images/american_express_logo_wordmark_detail.png"
               alt=""
             />
-          </a>
+          </button>
+          <button className="socialContainer containerFour">
+            <img src="/santa.png" alt="" />
+          </button>
         </div>
         <span className="text-base text-yellow-300 font-bold  flex items-center ">
           (Promoción válida hasta agotar stock)
