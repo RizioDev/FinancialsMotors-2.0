@@ -2,13 +2,17 @@
 import Promo from "../components/Promo.astro";
 import Banner from "../components/Banner/Banner.jsx";
 import Baner from "../components/Baner.astro";
+import BannerMid from "../components/BannerMid/BannerMid.jsx";
 import Detail from "../components/Detail/Detail.jsx";
 import Ficha from "../components/Ficha.astro";
 import Side from "../components/Side.astro";
 import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
 import Layout from "../layouts/Layout.astro";
-const skua = {
+import SideToSide from "../components/SideToSide/SideToSide.jsx";
+import Promot from "../components/Promot/Promot.jsx";
+import FichaTecnica from "../components/FichaTecnica.jsx";
+const triax = {
   nombreMoto: "Skua 250",
   reserva: "450.000",
   imgMoto: {
@@ -18,12 +22,11 @@ const skua = {
     swiperDos: "/imgSkua/skua250-azul.png",
     swiperTres: "/imgSkua/skua250-negro.png",
     swiperCuatro: "/imgSkua/skua250-rojo.png",
-    promoImg: "",
-    financiaImg: "",
-    bannerImg: "",
-    fichaImg: "",
-    banner2img: "",
-    bannerMovilImg: "",
+    promoImg: "/imgSkua/skuaPromo.png",
+    promoImg2: "/imgSkua/skuaPromo2.png",
+    fichaImg: "/imgSkua/fichaSkua.png",
+    bannerMid: "/imgSkua/bannerSkua.png",
+    bannerMidMovil: "/imgSkua/bannerMobilSkua.png",
     aboutImg: "",
     about2img: "",
   },
@@ -51,12 +54,12 @@ const skua = {
 
 <Layout title="Financials Motors">
   <Wpp />
-  <Banner moto={skua} client:load />
-  <Detail moto={skua} client:load />
-  <Promo />
-  <Ficha />
-  <Baner />
-  <Side />
+  <Banner moto={triax} client:load />
+  <Detail moto={triax} client:load />
+  <Promot moto={triax} client:load />
+  <FichaTecnica moto={triax} client:load />
+  <BannerMid moto={triax} client:load />
+  <SideToSide moto={triax} client:load />
   <Mapa />
 </Layout>
 
@@ -128,3 +131,4 @@ const skua = {
     color: var(--bodyTextColor);
   }
 </style>
+../components/Promot.jsx ../components/Promot/Promot.jsx

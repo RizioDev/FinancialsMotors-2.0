@@ -2,13 +2,16 @@
 import Promo from "../components/Promo.astro";
 import Banner from "../components/Banner/Banner.jsx";
 import Baner from "../components/Baner.astro";
+import BannerMid from "../components/BannerMid/BannerMid.jsx";
 import Detail from "../components/Detail/Detail.jsx";
 import Ficha from "../components/Ficha.astro";
 import Side from "../components/Side.astro";
 import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
 import Layout from "../layouts/Layout.astro";
+import SideToSide from "../components/SideToSide/SideToSide.jsx";
 import Promot from "../components/Promot/Promot.jsx";
+import FichaTecnica from "../components/FichaTecnica.jsx";
 const triax = {
   nombreMoto: "Skua 250",
   reserva: "450.000",
@@ -20,11 +23,10 @@ const triax = {
     swiperTres: "/imgTriax/triax250-negro.png",
     swiperCuatro: "/imgTriax/triax250-rojo.png",
     promoImg: "/imgTriax/triaxPromo.jpg",
-    financiaImg: "",
-    bannerImg: "",
-    fichaImg: "",
-    banner2img: "",
-    bannerMovilImg: "",
+    promoImg2: "/imgTriax/triaxPromo2.jpg",
+    fichaImg: "/imgTriax/fichaTriax.png",
+    bannerMid: "/imgTriax/bannerTriax.png",
+    bannerMidMovil: "/imgTriax/bannerMobilTriax.png",
     aboutImg: "",
     about2img: "",
   },
@@ -55,9 +57,9 @@ const triax = {
   <Banner moto={triax} client:load />
   <Detail moto={triax} client:load />
   <Promot moto={triax} client:load />
-  <Ficha />
-  <Baner />
-  <Side />
+  <FichaTecnica moto={triax} client:load />
+  <BannerMid moto={triax} client:load />
+  <SideToSide moto={triax} client:load />
   <Mapa />
 </Layout>
 

@@ -1,0 +1,161 @@
+import React from "react";
+
+const FichaTecnica = ({ moto }) => {
+  return (
+    <div class="container relative my-5 mt-10 mx-auto md:px-6 xl:px-24 border border-gray-300 bg-slate-800 rounded-lg p-6">
+      <div class="absolute inset-0 bg-opacity-10">
+        <img
+          src="/prueba.png"
+          alt="Logo Financials"
+          class="w-full h-full object-cover opacity-20"
+        />
+      </div>
+
+      <h1 class="text-4xl text-center font-sans font-bold text-slate-800">.</h1>
+      <div class="text-center">
+        <img
+          src={moto.imgMoto.fichaImg}
+          alt="Icono Ficha Técnica"
+          class="mx-auto mb-2 w-1/2 h-full rounded-lg shadow-xl"
+        />
+      </div>
+      <h1 class="text-4xl mt-10 text-center text-white font-noto font-bold">
+        Ficha Técnica
+      </h1>
+      <div class="mt-5 text-md md:grid md:grid-cols-3 gap-4">
+        <div>
+          <h3 class="text-white font-bold mt-2 font-noto">
+            Motor:
+            <span class="font-semibold capitalize font-noto text-white-500">
+              Monocilíndrico 4T
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Refrigeración:
+            <span class="font-semibold capitalize font-noto text-white-500">
+              Líquida
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Alimentación:
+            <span class="font-semibold font-noto text-white-500">
+              Inyección electrónica
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Potencia Máx:
+            <span class="font-semibold capitalize font-noto text-white-500">
+              46,2/8500 8 (CV/rpm)
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Velocidad Máx:
+            <span class="font-semibold font-noto capitalize text-white-500">
+              160 km/h
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Arranque:
+            <span class="font-semibold font-noto text-white-500">
+              Eléctrico
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Transmisión:
+            <span class="font-semibold font-noto capitalize text-white-500">
+              Manual 6 Velocidades
+            </span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Rodado delantero:
+            <span class="font-semibold font-noto text-white-500">120/70</span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Rodado trasero:
+            <span class="font-semibold font-noto text-white-500">160/60</span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Freno delantero:
+            <span class="font-semibold font-noto text-white-500">
+              Disco Abs
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Peso:
+            <span class="font-semibold capitalize font-noto text-white-500">
+              145 kg
+            </span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Ancho:
+            <span class="font-semibold font-noto text-white-500">780</span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Alto:
+            <span class="font-semibold font-noto text-white-500">1060</span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Alarma:
+            <span class="font-semibold font-noto text-white-500">
+              No Incluye
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <div>
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Freno Trasero:
+            <span class="font-semibold font-noto text-white-500">
+              Disco Abs
+            </span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Tanque:
+            <span class="font-semibold font-noto text-white-500">12 lts</span>
+          </h3>
+          <hr />
+          <h3 class="text-white mt-2 font-bold font-noto">
+            Equipamientos:
+            <span class="font-semibold font-noto text-white-500">
+              Tablero digital, baúles traseros
+            </span>
+          </h3>
+          <hr />
+        </div>
+        <h1 class="text-4xl mt-12 text-center font-noto font-bold text-slate-800">
+          .
+        </h1>
+      </div>
+    </div>
+  );
+};
+
+export default FichaTecnica;

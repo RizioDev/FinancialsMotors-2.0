@@ -229,7 +229,7 @@ const Detail = ({ moto }) => {
             />
           </button>
           <button className="socialContainer containerFour">
-            <img src="/santa.png" alt="" />
+            <img src="/Bancos/santander.png" alt="" />
           </button>
         </div>
         <span className="text-base text-yellow-300 font-bold  flex items-center ">
