@@ -1,0 +1,10 @@
+---
+const { moto } = Astro.params;
+import Layout from "../../layouts/Layout.astro";
+import Detail from "../../components/Detail/Detail";
+console.log(moto);
+---
+
+<Layout title="Financials Motors">
+  <Detail client:load />
+</Layout>

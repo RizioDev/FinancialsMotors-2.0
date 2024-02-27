@@ -8,7 +8,7 @@ import "./styles.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const Banner = () => {
+const Banner = ({ moto }) => {
   return (
     <div className="mt-[85px]">
       <Swiper
@@ -26,12 +26,12 @@ const Banner = () => {
         // className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/eso.png" alt="" />
+          <img src={moto.imgMoto.bannerTop} alt="" />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <a href="/financia">
-            <img src="/eso2.png" alt="" />
+            <img src="/Financiacion/bannerTopFinan.png" alt="" />
           </a>
         </SwiperSlide>
       </Swiper>

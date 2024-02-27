@@ -121,7 +121,7 @@ const FinanciaFor = () => {
             <div className="flex justify-center items-center">
               <span>
                 <img
-                  src="https://media.discordapp.net/attachments/1136484648344621087/1138541153667530812/descarga_1.png?width=499&height=676"
+                  src="/fnlogo.png"
                   className="h-10 mr-3"
                   alt="Financials Logo"
                 />

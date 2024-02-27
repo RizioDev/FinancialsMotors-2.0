@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-// import Swal from "sweetalert2";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+
+import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./cosa.css";
-// import Thumb from "./Thumb.jsx";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-const Detail = () => {
+
+const Detail = ({ moto }) => {
   const [acceptTerms, setAcceptTerms] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -86,12 +87,12 @@ const Detail = () => {
         </div>
         {/* <Thumb /> */}
 
-        <section className="max-w-screen-sm 2xl:max-w-screen-md mx-auto">
+        <section className="max-w-screen-sm 2xl:max-w-screen-md mx-auto cursor-pointer">
           <>
             <Swiper
               style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
+                "--swiper-navigation-color": "#000",
+                "--swiper-pagination-color": "#000",
               }}
               loop={true}
               spaceBetween={10}
@@ -102,19 +103,19 @@ const Detail = () => {
             >
               <SwiperSlide>
                 <img
-                  src="/finan.png"
+                  src={moto.imgMoto.swiperUno}
                   className="w-full h-full object-cover"
-                  alt="Finan"
+                  alt="Swiper 1"
                 />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/slider2.png" alt="Nature 2" />
+                <img src={moto.imgMoto.swiperDos} alt="Swiper 2" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/slider3.png" alt="Nature 3" />
+                <img src={moto.imgMoto.swiperTres} alt="Swiper 3" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="slider4.png" alt="Nature 4" />
+                <img src={moto.imgMoto.swiperCuatro} alt="Swiper 4" />
               </SwiperSlide>
             </Swiper>
             <Swiper
@@ -128,16 +129,32 @@ const Detail = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img src="/finan.png" alt="Nature 7" />
+                <img
+                  className="w-16 h-16 object-cover"
+                  src={moto.imgMoto.swiperUno}
+                  alt="swiperUnoSmall"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/slider2.png" alt="Nature 8" />
+                <img
+                  className="w-16 h-16 object-cover"
+                  src={moto.imgMoto.swiperDos}
+                  alt="swiperDosSmall"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/slider3.png" alt="Nature 9" />
+                <img
+                  className="w-16 h-16 object-cover"
+                  src={moto.imgMoto.swiperTres}
+                  alt="swiperTresSmall"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/slider4.png" alt="Nature 10" />
+                <img
+                  className="w-16 h-16 object-cover"
+                  src={moto.imgMoto.swiperCuatro}
+                  alt="swiperCuatroSmall"
+                />
               </SwiperSlide>
             </Swiper>
           </>
@@ -151,20 +168,20 @@ const Detail = () => {
         <div className="mb-6 flex items-center text-white underline">
           <span>
             <img
-              src="https://media.discordapp.net/attachments/1136484648344621087/1138541153667530812/descarga_1.png?width=499&height=676"
+              src="/fnlogo.png"
               className="h-10 mr-3"
               alt="Financials Logo"
             />
           </span>
           <div>
             <h1 className="text-2xl 2xl:text-3xl text-white uppercase  font-noto">
-              solicitar <span className="font-bold">infórmacion</span>
+              Solicitar <span className="font-bold">información</span>
             </h1>
           </div>
         </div>
-        <h1 className="text-white font-noto font-bold text-3xl md:text-4xl 2xl:text-5xl">
-          ROUSER NS200
-        </h1>
+        <div className="text-white font-noto items-start justify-start">
+          <img className="w-64 mb-2 h-20" src={moto.imgMoto.textoImg} alt="" />
+        </div>
         <h2 className="text-white font-noto font-semibold text-xl">
           2024 <span className="text-white">•</span> 0 km{" "}
         </h2>
@@ -177,7 +194,7 @@ const Detail = () => {
             Reserva:{" "}
           </span>
           <span className="bg-blue-400 border border-black font-extrabold p-1">
-            $ 450.000{" "}
+            $ {moto.reserva}
           </span>
           <del className=" text-white font-bold text-sn ml-2 font-noto">
             $567,000
@@ -190,23 +207,19 @@ const Detail = () => {
 
         <div className="card">
           <button className="socialContainer containerOne">
-            <img className="w-16 h-10" src="/visa.png" alt="" />
+            <img className="w-16 h-10" src="/Bancos/visa.png" alt="" />
           </button>
 
           <button className="socialContainer containerTwo">
-            <img className="w-16 h-8" src="msc.png" alt="" />
+            <img className="w-16 h-8" src="/Bancos/master.png" alt="" />
           </button>
 
           <button className="socialContainer containerThree">
-            <img
-              className="w-15 h-9"
-              src="https://seeklogo.com/images/N/naranja-x-logo-DE538DBF7B-seeklogo.com.png"
-              alt=""
-            />
+            <img className="w-15 h-9" src="/Bancos/naranjax.png" alt="" />
           </button>
 
           <button className="socialContainer containerFour">
-            <img src="/mp.png" alt="" />
+            <img src="/Bancos/mp.png" alt="" />
           </button>
 
           <button className="socialContainer containerFour">

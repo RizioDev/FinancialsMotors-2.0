@@ -8,18 +8,18 @@ import Side from "../components/Side.astro";
 import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
 import Layout from "../layouts/Layout.astro";
-
-const rouser = {
-  nombreMoto: "Rouser NS200",
+import Promot from "../components/Promot/Promot.jsx";
+const triax = {
+  nombreMoto: "Skua 250",
   reserva: "450.000",
   imgMoto: {
-    textoImg: "/imgRouser/rouserTexto.png",
-    bannerTop: "/imgRouser/bannerTopRouser.png",
-    swiperUno: "/imgRouser/rouserFotoUno.png",
-    swiperDos: "/imgRouser/rouser-azul.png",
-    swiperTres: "/imgRouser/rouser-blanco.png",
-    swiperCuatro: "/imgRouser/rouser-rojo.png",
-    promoImg: "",
+    textoImg: "/imgTriax/triaxTexto.png",
+    bannerTop: "/imgTriax/bannerTopTriax.png",
+    swiperUno: "/imgTriax/triaxFotoUno.png",
+    swiperDos: "/imgTriax/triax250-blanco.png",
+    swiperTres: "/imgTriax/triax250-negro.png",
+    swiperCuatro: "/imgTriax/triax250-rojo.png",
+    promoImg: "/imgTriax/triaxPromo.jpg",
     financiaImg: "",
     bannerImg: "",
     fichaImg: "",
@@ -52,9 +52,9 @@ const rouser = {
 
 <Layout title="Financials Motors">
   <Wpp />
-  <Banner moto={rouser} client:load />
-  <Detail moto={rouser} client:load />
-  <Promo />
+  <Banner moto={triax} client:load />
+  <Detail moto={triax} client:load />
+  <Promot moto={triax} client:load />
   <Ficha />
   <Baner />
   <Side />
@@ -129,3 +129,4 @@ const rouser = {
     color: var(--bodyTextColor);
   }
 </style>
+../components/Promot.jsx ../components/Promot/Promot.jsx

@@ -8,17 +8,16 @@ import Side from "../components/Side.astro";
 import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
 import Layout from "../layouts/Layout.astro";
-
-const rouser = {
-  nombreMoto: "Rouser NS200",
+const skua = {
+  nombreMoto: "Skua 250",
   reserva: "450.000",
   imgMoto: {
-    textoImg: "/imgRouser/rouserTexto.png",
-    bannerTop: "/imgRouser/bannerTopRouser.png",
-    swiperUno: "/imgRouser/rouserFotoUno.png",
-    swiperDos: "/imgRouser/rouser-azul.png",
-    swiperTres: "/imgRouser/rouser-blanco.png",
-    swiperCuatro: "/imgRouser/rouser-rojo.png",
+    textoImg: "/imgSkua/skuaTexto.png",
+    bannerTop: "/imgSkua/bannerTopSkua.png",
+    swiperUno: "/imgSkua/skuaFotoUno.png",
+    swiperDos: "/imgSkua/skua250-azul.png",
+    swiperTres: "/imgSkua/skua250-negro.png",
+    swiperCuatro: "/imgSkua/skua250-rojo.png",
     promoImg: "",
     financiaImg: "",
     bannerImg: "",
@@ -52,8 +51,8 @@ const rouser = {
 
 <Layout title="Financials Motors">
   <Wpp />
-  <Banner moto={rouser} client:load />
-  <Detail moto={rouser} client:load />
+  <Banner moto={skua} client:load />
+  <Detail moto={skua} client:load />
   <Promo />
   <Ficha />
   <Baner />
