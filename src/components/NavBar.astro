@@ -15,12 +15,18 @@
         class="menu text-[#9cd6e0] flex [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:font-medium [&>li>a]:text-lg"
       >
         <li><a class="hover:underline" href="/triax-250-r3">Triax 250</a></li>
-
+        <p class="hidden lg:flex ml-4">|</p>
         <li><a class="hover:underline" href="/skua-250-r3">Skua 250</a></li>
+        <p class="hidden lg:flex ml-4">|</p>
+
         <li>
-          <a class="hover:underline" href="/rouser-ns-200">Rouser NS200</a>
+          <a class="hover:underline" href="/rouser-ns-200">Rouser200</a>
         </li>
+        <p class="hidden lg:flex ml-4">|</p>
+
         <li><a class="hover:underline" href="/financia">Financia</a></li>
+        <p class="hidden lg:flex ml-4">|</p>
+
         <li><a class="hover:underline" href="/nosotros">Nosotros</a></li>
 
         <li><a class="num" href="#">0800-268-0423</a></li>
@@ -120,6 +126,10 @@
     position: relative;
     overflow: hidden;
     outline: 2px solid #18c7e6;
+  }
+
+  .navigation li a {
+    font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
   }
 
   .num:hover {
