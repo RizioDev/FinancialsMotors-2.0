@@ -14,9 +14,15 @@
       <span
         class="menu text-[#9cd6e0] flex [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:font-medium [&>li>a]:text-lg"
       >
-        <li><a class="hover:underline" href="/nosotros">Nosotros</a></li>
+        <li><a class="hover:underline" href="/triax-250-r3">Triax 250</a></li>
+
+        <li><a class="hover:underline" href="/skua-250-r3">Skua 250</a></li>
+        <li>
+          <a class="hover:underline" href="/rouser-ns-200">Rouser NS200</a>
+        </li>
         <li><a class="hover:underline" href="/financia">Financia</a></li>
-        <li><a class="hover:underline" href="/#contacto">Contacto</a></li>
+        <li><a class="hover:underline" href="/nosotros">Nosotros</a></li>
+
         <li><a class="num" href="#">0800-268-0423</a></li>
 
         <label for="check" class="close-menu">X</label>
@@ -123,3 +129,10 @@
     box-shadow: 4px 5px 17px -4px #268391;
   }
 </style>
+
+<script>
+  const toggleMotos = () => {
+    const motosDropdown = document.getElementById("motosDropdown");
+    motosDropdown.classList.toggle("hidden");
+  };
+</script>

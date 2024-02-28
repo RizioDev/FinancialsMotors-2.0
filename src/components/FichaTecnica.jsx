@@ -14,6 +14,11 @@ const FichaTecnica = ({ moto }) => {
       <h1 class="text-4xl text-center font-sans font-bold text-slate-800">.</h1>
       <div class="text-center">
         <img
+          src={moto.imgMoto.textoImg}
+          alt="Icono Ficha Técnica"
+          class="mx-auto mb-5 w-1/4 "
+        />
+        <img
           src={moto.imgMoto.fichaImg}
           alt="Icono Ficha Técnica"
           class="mx-auto mb-2 w-1/2 h-full rounded-lg shadow-xl"
@@ -27,7 +32,7 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white font-bold mt-2 font-noto">
             Motor:
             <span class="font-semibold capitalize font-noto text-white-500">
-              Monocilíndrico 4T
+              {moto.fichaTecnica.motor}
             </span>
           </h3>
           <hr />
@@ -36,7 +41,7 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Refrigeración:
             <span class="font-semibold capitalize font-noto text-white-500">
-              Líquida
+              {moto.fichaTecnica.refrigeracion}
             </span>
           </h3>
           <hr />
@@ -45,7 +50,7 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Alimentación:
             <span class="font-semibold font-noto text-white-500">
-              Inyección electrónica
+              {moto.fichaTecnica.alimentacion}
             </span>
           </h3>
           <hr />
@@ -54,7 +59,7 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Potencia Máx:
             <span class="font-semibold capitalize font-noto text-white-500">
-              46,2/8500 8 (CV/rpm)
+              {moto.fichaTecnica.potenciaMax}
             </span>
           </h3>
           <hr />
@@ -63,7 +68,7 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Velocidad Máx:
             <span class="font-semibold font-noto capitalize text-white-500">
-              160 km/h
+              {moto.fichaTecnica.velocidadMax}
             </span>
           </h3>
           <hr />
@@ -72,7 +77,7 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Arranque:
             <span class="font-semibold font-noto text-white-500">
-              Eléctrico
+              {moto.fichaTecnica.arranque}
             </span>
           </h3>
           <hr />
@@ -81,24 +86,28 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Transmisión:
             <span class="font-semibold font-noto capitalize text-white-500">
-              Manual 6 Velocidades
+              {moto.fichaTecnica.transmision}
             </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Rodado delantero:
-            <span class="font-semibold font-noto text-white-500">120/70</span>
+            <span class="font-semibold font-noto text-white-500">
+              {moto.fichaTecnica.rodadoDelantero}
+            </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Rodado trasero:
-            <span class="font-semibold font-noto text-white-500">160/60</span>
+            <span class="font-semibold font-noto text-white-500">
+              {moto.fichaTecnica.rodadoTrasero}
+            </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Freno delantero:
             <span class="font-semibold font-noto text-white-500">
-              Disco Abs
+              {moto.fichaTecnica.rodadoDelantero}
             </span>
           </h3>
           <hr />
@@ -107,24 +116,28 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Peso:
             <span class="font-semibold capitalize font-noto text-white-500">
-              145 kg
+              {moto.fichaTecnica.peso}
             </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Ancho:
-            <span class="font-semibold font-noto text-white-500">780</span>
+            <span class="font-semibold font-noto text-white-500">
+              {moto.fichaTecnica.ancho}
+            </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Alto:
-            <span class="font-semibold font-noto text-white-500">1060</span>
+            <span class="font-semibold font-noto text-white-500">
+              {moto.fichaTecnica.alto}
+            </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Alarma:
             <span class="font-semibold font-noto text-white-500">
-              No Incluye
+              {moto.fichaTecnica.alarma}
             </span>
           </h3>
           <hr />
@@ -133,19 +146,21 @@ const FichaTecnica = ({ moto }) => {
           <h3 class="text-white mt-2 font-bold font-noto">
             Freno Trasero:
             <span class="font-semibold font-noto text-white-500">
-              Disco Abs
+              {moto.fichaTecnica.frenoTrasero}
             </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Tanque:
-            <span class="font-semibold font-noto text-white-500">12 lts</span>
+            <span class="font-semibold font-noto text-white-500">
+              {moto.fichaTecnica.tanque}
+            </span>
           </h3>
           <hr />
           <h3 class="text-white mt-2 font-bold font-noto">
             Equipamientos:
             <span class="font-semibold font-noto text-white-500">
-              Tablero digital, baúles traseros
+              {moto.fichaTecnica.equipamientos}
             </span>
           </h3>
           <hr />

@@ -8,7 +8,6 @@ import Side from "../components/Side.astro";
 import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
 import Layout from "../layouts/Layout.astro";
-import WhatsappBtn from "../components/WasapBtn/WhatsappBtn.jsx";
 
 const rouser = {
   nombreMoto: "Rouser NS200",
@@ -48,7 +47,7 @@ const rouser = {
 ---
 
 <Layout title="Financials Motors">
-  <WhatsappBtn moto={rouser} />
+  <Wpp />
   <Banner moto={rouser} client:load />
   <Detail moto={rouser} client:load />
   <Promot moto={rouser} client:load />

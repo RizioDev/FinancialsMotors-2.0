@@ -6,14 +6,14 @@ import BannerMid from "../components/BannerMid/BannerMid.jsx";
 import Detail from "../components/Detail/Detail.jsx";
 import Ficha from "../components/Ficha.astro";
 import Side from "../components/Side.astro";
-import Wpp from "../components/Wpp.astro";
+import WhatsappBtn from "../components/WasapBtn/WhatsappBtn";
 import Mapa from "../components/Mapa.astro";
 import Layout from "../layouts/Layout.astro";
 import SideToSide from "../components/SideToSide/SideToSide.jsx";
 import Promot from "../components/Promot/Promot.jsx";
 import FichaTecnica from "../components/FichaTecnica.jsx";
 const triax = {
-  nombreMoto: "Skua 250",
+  nombreMoto: "Triax 250",
   reserva: "450.000",
   imgMoto: {
     textoImg: "/imgTriax/triaxTexto.png",
@@ -53,7 +53,7 @@ const triax = {
 ---
 
 <Layout title="Financials Motors">
-  <Wpp />
+  <WhatsappBtn moto={triax} />
   <Banner moto={triax} client:load />
   <Detail moto={triax} client:load />
   <Promot moto={triax} client:load />

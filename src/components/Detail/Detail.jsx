@@ -47,7 +47,9 @@ const Detail = ({ moto }) => {
         formData.Nombre
       )}+soy+de+${encodeURIComponent(
         formData.Localidad
-      )}+y+estoy+interesado+en+la+Rouser+NS200+me+gustaria+pagar+el+anticipo+con+${encodeURIComponent(
+      )}+y+estoy+interesado+en+la+${
+        moto.nombreMoto
+      }+me+gustaria+pagar+el+anticipo+con+${encodeURIComponent(
         formData.Anticipo
       )}&type=phone_number&app_absent=0`;
 

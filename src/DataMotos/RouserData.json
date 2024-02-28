@@ -1,0 +1,36 @@
+{
+    "nombreMoto": "Rouser NS200",
+    "reserva": "450.000",
+    "imgMoto": {
+      "textoImg": "/imgRouser/rouserTexto.png",
+      "bannerTop": "/imgRouser/bannerTopRouser.png",
+      "swiperUno": "/imgRouser/rouserFotoUno.png",
+      "swiperDos": "/imgRouser/rouser-azul.png",
+      "swiperTres": "/imgRouser/rouser-blanco.png",
+      "swiperCuatro": "/imgRouser/rouser-rojo.png",
+      "promoImg": "/imgRouser/rouserPromoUno.jpg",
+      "fichaImg": "/imgRouser/fichaRouser.png",
+      "bannerMid": "/imgSkua/bannerSkua.png",
+      "bannerMidMovil": "/imgSkua/bannerMobilSkua.png"
+    },
+    "fichaTecnica": {
+      "motor": "Monocilíndrico 4T",
+      "potenciaMax": "46,2/8500 8 (CV/rpm)",
+      "transmision": "Manual 6 Velocidades",
+      "rodadoDelantero": "120/70",
+      "rodadoTrasero": "160/60",
+      "frenoDelantero": "Disco Abs",
+      "refrigeracion": "Líquida",
+      "velocidadMax": "160 km/h",
+      "peso": "145 kg",
+      "ancho": "780",
+      "alto": "1060",
+      "alarma": "No Incluye",
+      "alimentacion": "Inyección electrónica",
+      "arranque": "Eléctrico",
+      "frenoTrasero": "Disco Abs",
+      "tanque": "12 lts",
+      "equipamientos": "Tablero digital, baúles traseros"
+    }
+  }
+  
