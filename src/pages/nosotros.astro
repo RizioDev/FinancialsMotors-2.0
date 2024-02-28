@@ -1,14 +1,22 @@
 ---
 import LayoutNosotros from "../layouts/LayoutNosotros.astro";
-import Side from "../components/Side.astro";
-import Wpp from "../components/Wpp.astro";
+import WhatsappBtn from "../components/WasapBtn/WhatsappBtn";
+import SideToSide from "../components/SideToSide/SideToSide";
+
+const todo = {
+  imgMoto: {
+    promoImg: "/imgRouser/loca.webp",
+    promoImg2: "/imgRouser/rouserPromoUno.jpg",
+  },
+  nombreMoto: "Las motos disponibles",
+};
 ---
 
 <LayoutNosotros title="Nosotros">
-  <Wpp />
+  <WhatsappBtn moto={todo} />
   <section
     class="flex justify-center items-centermt-250 mt-[180px] lg:mt-[140px] md:mt-[100px] 2xl:mt-[250px] mb-32 2xl:mb-[0px] h-screen"
   >
-    <Side />
+    <SideToSide moto={todo} />
   </section>
 </LayoutNosotros>

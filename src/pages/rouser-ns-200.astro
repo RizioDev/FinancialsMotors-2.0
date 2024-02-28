@@ -4,10 +4,10 @@ import Banner from "../components/Banner/Banner.jsx";
 import Baner from "../components/Baner.astro";
 import Detail from "../components/Detail/Detail.jsx";
 import FichaTecnica from "../components/FichaTecnica.jsx";
-import Side from "../components/Side.astro";
-import Wpp from "../components/Wpp.astro";
 import Mapa from "../components/Mapa.astro";
+import SideToSide from "../components/SideToSide/SideToSide.jsx";
 import Layout from "../layouts/Layout.astro";
+import WhatsappBtn from "../components/WasapBtn/WhatsappBtn";
 
 const rouser = {
   nombreMoto: "Rouser NS200",
@@ -19,7 +19,8 @@ const rouser = {
     swiperDos: "/imgRouser/rouser-azul.png",
     swiperTres: "/imgRouser/rouser-blanco.png",
     swiperCuatro: "/imgRouser/rouser-rojo.png",
-    promoImg: "/imgRouser/rouserPromoUno.jpg",
+    promoImg: "/imgRouser/loca.webp",
+    promoImg2: "/imgRouser/rouserPromoUno.jpg",
     fichaImg: "/imgRouser/fichaRouser.png",
     bannerMid: "/imgSkua/bannerSkua.png",
     bannerMidMovil: "/imgSkua/bannerMobilSkua.png",
@@ -47,13 +48,13 @@ const rouser = {
 ---
 
 <Layout title="Financials Motors">
-  <Wpp />
+  <WhatsappBtn moto={rouser} />
   <Banner moto={rouser} client:load />
   <Detail moto={rouser} client:load />
   <Promot moto={rouser} client:load />
   <FichaTecnica moto={rouser} client:load />
   <Baner />
-  <Side />
+  <SideToSide moto={rouser} />
   <Mapa />
 </Layout>
 
