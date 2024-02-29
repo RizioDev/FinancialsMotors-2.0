@@ -78,10 +78,10 @@ const Detail = ({ moto }) => {
               className="hover:underline"
               href="https://www.globalbajaj.com/argentina/castellano/productos/motorcycles/rouser/rouser-ns-200/general/"
             >
-              BAJAJ
+              {moto.empresa}
             </a>{" "}
             <span className="text-white">/</span>
-            <span className="text-white"> Rouser NS200</span>
+            <span className="text-white"> {moto.nombreMoto}</span>
             <p className="text-xl mb-1 normal-case text-white font-noto">
               Entrega Asegurada
             </p>

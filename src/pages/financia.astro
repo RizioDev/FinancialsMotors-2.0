@@ -1,11 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import FinanciaFor from "../components/FinanciaFor.jsx";
-import Wpp from "../components/Wpp.astro";
+import WhatsappBtn from "../components/WasapBtn/WhatsappBtn";
+const todo = {
+  nombreMoto: "Las motos disponibles",
+};
 ---
 
 <Layout title="¡Financia hoy!">
-  <Wpp />
+  <WhatsappBtn moto={todo} />
   <section class="mt-[95px] bg-gradient-to-r from-slate-800 to-gray-900">
     <FinanciaFor client:load />
   </section>

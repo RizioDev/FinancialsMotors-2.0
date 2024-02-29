@@ -1,6 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
-import Wpp from "./Wpp.astro";
 import "./finan.css";
 
 const FinanciaFor = () => {

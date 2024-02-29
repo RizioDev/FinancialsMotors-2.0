@@ -1,4 +1,3 @@
-import React from "react";
 import "./promot.css";
 
 const Promot = ({ moto }) => {
